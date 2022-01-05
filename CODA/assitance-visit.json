@@ -1,0 +1,382 @@
+{
+    "resourceType": "Questionnaire",
+    "language": "nb-NO",
+    "status": "draft",
+    "publisher": "NHN",
+    "meta": {
+        "profile": [
+            "http://ehelse.no/fhir/StructureDefinition/sdf-Questionnaire"
+        ],
+        "tag": [
+            {
+                "system": "urn:ietf:bcp:47",
+                "code": "nb-NO",
+                "display": "Norsk Bokmål"
+            }
+        ]
+    },
+    "useContext": [
+        {
+            "code": {
+                "system": "http://hl7.org/fhir/ValueSet/usage-context-type",
+                "code": "focus",
+                "display": "Clinical Focus"
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "urn:oid:2.16.578.1.12.4.1.1.8655"
+                    }
+                ]
+            }
+        }
+    ],
+    "contact": [
+        {
+            "name": "http://www.nhn.no"
+        }
+    ],
+    "subjectType": [
+        "Patient"
+    ],
+    "item": [
+        {
+            "linkId": "8b1b3900-6146-4475-a4e1-11f53f8822be",
+            "type": "choice",
+            "text": "Is this child's first visit?",
+            "required": false,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "id": "e73b8894-0f4d-4f66-84d5-b1db9741c547",
+                        "code": "yes",
+                        "system": "urn:uuid:75f5e224-32cf-4e43-84e8-00ec567ca21a",
+                        "display": "Yes"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "16b56a48-9194-452b-bdd8-631048d7daf4",
+                        "code": "no",
+                        "system": "urn:uuid:75f5e224-32cf-4e43-84e8-00ec567ca21a",
+                        "display": "No"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "1b02a95a-dc32-483a-fe12-fa5449986497",
+            "type": "choice",
+            "text": "Is RUSF available?",
+            "required": false,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "id": "c2aa3441-a17b-41c5-887d-7502b0ee3934",
+                        "code": "yes",
+                        "system": "urn:uuid:2df10a1a-d8a9-43ff-88ae-efd503db77af",
+                        "display": "Yes"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "64f48274-b1b2-436e-800b-b8173e8f63f2",
+                        "code": "no",
+                        "system": "urn:uuid:2df10a1a-d8a9-43ff-88ae-efd503db77af",
+                        "display": "No"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "519c33cd-a36f-485d-ffc0-ab49901a3046",
+            "type": "choice",
+            "text": "Choose ration type",
+            "required": false,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "id": "3e3ff83e-a8fb-44d5-8ecd-8eaac2d2f58b",
+                        "code": "rusf",
+                        "system": "urn:uuid:0378d93b-1a39-4b6b-aaa9-341ac15f18d1",
+                        "display": "RUSF"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "6ca354ff-c98e-4810-89bb-f8fd5885b1aa",
+                        "code": "csb++",
+                        "system": "urn:uuid:0378d93b-1a39-4b6b-aaa9-341ac15f18d1",
+                        "display": "CSB++"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "5d7f04f3-4498-4345-cdd2-b45294dbd189",
+                        "code": "plumpsub",
+                        "system": "urn:uuid:0378d93b-1a39-4b6b-aaa9-341ac15f18d1",
+                        "display": "PlumpSub"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "96cb0f16-fbf5-444d-b590-3de84329fbe2",
+            "type": "string",
+            "text": "In how many days is the next visit?",
+            "extension": [
+                {
+                    "url": "http://helsenorge.no/fhir/StructureDefinition/sdf-sublabel",
+                    "valueMarkdown": "Programme default: 14 days"
+                }
+            ],
+            "required": false
+        },
+        {
+            "linkId": "7b2fc90e-ecfa-4c0e-847a-c0467baf2583",
+            "type": "choice",
+            "text": "What type of counseling have been given?",
+            "required": false,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "id": "0b546192-2776-4798-acf6-34e727f10682",
+                        "code": "optimal-dietary-practices-for-adults,-including-pregnant-and-lactating-women",
+                        "system": "urn:uuid:3afa3b3f-1e2e-4135-8ba9-3e78a548d3c7",
+                        "display": "Optimal dietary practices for adults, including pregnant and lactating women"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "177121bf-2ccd-4306-8558-8316687f5f64",
+                        "code": "use-of-therapeutic-foods",
+                        "system": "urn:uuid:3afa3b3f-1e2e-4135-8ba9-3e78a548d3c7",
+                        "display": "Use of therapeutic foods"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "6218a58f-4d9c-4ea1-c374-923a4e339a73",
+                        "code": "infant-and-young-child-feeding-(iycf)",
+                        "system": "urn:uuid:3afa3b3f-1e2e-4135-8ba9-3e78a548d3c7",
+                        "display": "Infant and young child feeding (IYCF)"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "e1de7fcd-0bd7-4c8d-f2c2-919c7d4bdcd8",
+                        "code": "water,-hygiene-and-sanitation-(wash)",
+                        "system": "urn:uuid:3afa3b3f-1e2e-4135-8ba9-3e78a548d3c7",
+                        "display": "Water, hygiene and sanitation (WASH)"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "9cdb97bf-6cd8-4969-a427-89932bf5ad9f",
+                        "code": "arv-adherence",
+                        "system": "urn:uuid:3afa3b3f-1e2e-4135-8ba9-3e78a548d3c7",
+                        "display": "ARV adherence"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "a7db81b3-6618-46a6-8479-489b62ff0cf8",
+                        "code": "other",
+                        "system": "urn:uuid:3afa3b3f-1e2e-4135-8ba9-3e78a548d3c7",
+                        "display": "Other"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "40dafb52-eb4f-42e0-f380-ae7ff5efbbb1",
+            "type": "choice",
+            "text": "Do you want to exit?",
+            "required": false,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "id": "0c2bad2c-653f-4cb5-88e9-227091a8c619",
+                        "code": "yes",
+                        "system": "urn:uuid:879af81e-808e-465c-fa3d-34e1429ef557",
+                        "display": "Yes"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "ef262507-7575-452b-9c09-4778857c90ca",
+                        "code": "no",
+                        "system": "urn:uuid:879af81e-808e-465c-fa3d-34e1429ef557",
+                        "display": "No"
+                    }
+                }
+            ],
+            "enableWhen": [
+                {
+                    "question": "8b1b3900-6146-4475-a4e1-11f53f8822be",
+                    "operator": "=",
+                    "answerCoding": {
+                        "system": "urn:uuid:75f5e224-32cf-4e43-84e8-00ec567ca21a",
+                        "code": "no"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "3014a4c0-5ef2-4e73-9836-6ee095a69312",
+            "type": "group",
+            "text": "Exit Programme",
+            "item": [
+                {
+                    "linkId": "26b7c2cf-65e7-40c4-8c6b-b3f892d20095",
+                    "type": "choice",
+                    "text": "Select reason for exit",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "id": "aedd2e40-c232-4b5a-a5cb-3807dd31a8f4",
+                                "code": "exit-for-transfer-to-sam",
+                                "system": "urn:uuid:3c08cb82-47d2-44f6-8040-2fce0e4cd1ab",
+                                "display": "Exit for transfer to SAM"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "00d39450-5c59-414c-bc5d-23b05a6fac3d",
+                                "code": "exit-for-transfer-to-other-mam",
+                                "system": "urn:uuid:3c08cb82-47d2-44f6-8040-2fce0e4cd1ab",
+                                "display": "Exit for transfer to other MAM"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "fbe490b9-d071-4090-a6e6-f50c6bad28ea",
+                                "code": "exit-cured",
+                                "system": "urn:uuid:3c08cb82-47d2-44f6-8040-2fce0e4cd1ab",
+                                "display": "Exit cured"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "7bf8bd79-dd01-4a21-99ed-555dbf31744e",
+                                "code": "deceased",
+                                "system": "urn:uuid:3c08cb82-47d2-44f6-8040-2fce0e4cd1ab",
+                                "display": "Deceased"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "9fd5f3b8-1fc3-4edb-8525-c41df397743e",
+                                "code": "lost-sight",
+                                "system": "urn:uuid:3c08cb82-47d2-44f6-8040-2fce0e4cd1ab",
+                                "display": "Lost sight"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "49bc8040-194b-4402-ee5f-cb44bbc4009b",
+                    "type": "choice",
+                    "text": "Communication and monitoring report",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "id": "85e0ccea-c4dd-48f3-805a-9795a6e72665",
+                                "code": "-en-(nutritional-education)",
+                                "system": "urn:uuid:7d655687-37c4-4291-a56b-29211dc7ec33",
+                                "display": " EN (Nutritional education)"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "d9040c0d-f8c2-4965-a232-3416b27e59b4",
+                                "code": "dc-(demonstration-culinaire)",
+                                "system": "urn:uuid:7d655687-37c4-4291-a56b-29211dc7ec33",
+                                "display": "DC (Demonstration Culinaire)"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "065fad77-f5fb-49a3-ea92-d7c1f58977d3",
+                                "code": "vad-(household-visit)",
+                                "system": "urn:uuid:7d655687-37c4-4291-a56b-29211dc7ec33",
+                                "display": "VAD (household visit)"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "1238d44b-af08-4204-9988-097200adc86b",
+                                "code": "field-community-meeting-(reeunion-communautaire)",
+                                "system": "urn:uuid:7d655687-37c4-4291-a56b-29211dc7ec33",
+                                "display": "Field community meeting (Reeunion communautaire)"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "required": false,
+            "enableWhen": [
+                {
+                    "question": "40dafb52-eb4f-42e0-f380-ae7ff5efbbb1",
+                    "operator": "=",
+                    "answerCoding": {
+                        "system": "urn:uuid:879af81e-808e-465c-fa3d-34e1429ef557",
+                        "code": "yes"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "b8bb5af1-f83d-4b6a-84f9-32969696fc57",
+            "type": "choice",
+            "text": "Communication and monitoring report",
+            "required": false,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "id": "85e0ccea-c4dd-48f3-805a-9795a6e72665",
+                        "code": "-en-(nutritional-education)",
+                        "system": "urn:uuid:7d655687-37c4-4291-a56b-29211dc7ec33",
+                        "display": " EN (Nutritional education)"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "d9040c0d-f8c2-4965-a232-3416b27e59b4",
+                        "code": "dc-(demonstration-culinaire)",
+                        "system": "urn:uuid:7d655687-37c4-4291-a56b-29211dc7ec33",
+                        "display": "DC (Demonstration Culinaire)"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "065fad77-f5fb-49a3-ea92-d7c1f58977d3",
+                        "code": "vad-(household-visit)",
+                        "system": "urn:uuid:7d655687-37c4-4291-a56b-29211dc7ec33",
+                        "display": "VAD (household visit)"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "1238d44b-af08-4204-9988-097200adc86b",
+                        "code": "field-community-meeting-(reeunion-communautaire)",
+                        "system": "urn:uuid:7d655687-37c4-4291-a56b-29211dc7ec33",
+                        "display": "Field community meeting (Reeunion communautaire)"
+                    }
+                }
+            ],
+            "enableWhen": [
+                {
+                    "question": "8b1b3900-6146-4475-a4e1-11f53f8822be",
+                    "operator": "=",
+                    "answerCoding": {
+                        "system": "urn:uuid:75f5e224-32cf-4e43-84e8-00ec567ca21a",
+                        "code": "yes"
+                    }
+                }
+            ]
+        }
+    ]
+}
