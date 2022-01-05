@@ -1,1 +1,294 @@
-{"resourceType":"Questionnaire","language":"nb-NO","status":"draft","publisher":"NHN","meta":{"profile":["http://ehelse.no/fhir/StructureDefinition/sdf-Questionnaire"],"tag":[{"system":"urn:ietf:bcp:47","code":"nb-NO","display":"Norsk Bokmål"}]},"useContext":[{"code":{"system":"http://hl7.org/fhir/ValueSet/usage-context-type","code":"focus","display":"Clinical Focus"},"valueCodeableConcept":{"coding":[{"system":"urn:oid:2.16.578.1.12.4.1.1.8655"}]}}],"contact":[{"name":"http://www.nhn.no"}],"subjectType":["Patient"],"item":[{"linkId":"f0361e64-db57-495a-8c82-fa6576e84f74","type":"string","text":"First Name","required":false},{"linkId":"007eadd1-3929-4786-803a-72df7a11735b","type":"string","text":"Last Name","required":false},{"linkId":"be2b7976-84a9-47ce-d370-d85eac562c1c","type":"string","text":"Father's Name","required":false},{"linkId":"216db7ae-08a2-483c-8fdb-a9113c0635fd","type":"string","text":"Date of Birth","required":false},{"linkId":"38896946-7046-42f0-dabd-6ed855965a38","type":"string","text":"Age (in months)","required":false},{"linkId":"23e7f371-6996-417e-af8c-6df395ba04e1","type":"choice","text":"Gender","required":false,"answerOption":[{"valueCoding":{"id":"3a33446f-8f5e-4c9b-8c29-0da0114780e8","code":"male","system":"urn:uuid:1e5394a9-102a-4521-8020-c2e204d0409c","display":"Male"}},{"valueCoding":{"id":"436c9e0c-ab4c-4ddf-ad44-7fc53302ffc7","code":"female","system":"urn:uuid:1e5394a9-102a-4521-8020-c2e204d0409c","display":"Female"}}],"enableWhen":[{"question":"38896946-7046-42f0-dabd-6ed855965a38","operator":">=","answerString":"6"},{"question":"38896946-7046-42f0-dabd-6ed855965a38","operator":"<=","answerString":"59"}],"enableBehavior":"all"},{"linkId":"cac87acc-6d63-4a57-9dab-34be3dc8ab2a","type":"group","text":"Eligible Child","item":[{"linkId":"2e4dec25-fa6e-4d5f-bfce-8427f5c7a947","type":"string","text":"Registration ID","required":false},{"linkId":"aed720ee-2c0b-4fc5-85d6-a6e8026ade11","type":"choice","text":"Beneficiary Group","required":false,"answerOption":[{"valueCoding":{"id":"6f0c1656-869f-4ae9-afed-54f2c3257b6e","code":"sid-kids-r-us","system":"urn:uuid:15d4dda8-e346-4681-e331-91ccdc76a261","display":"Sid Kids R Us"}},{"valueCoding":{"id":"adaef75b-c72b-4883-85c5-f3cc774ee1cc","system":"urn:uuid:15d4dda8-e346-4681-e331-91ccdc76a261"}}]},{"linkId":"1fda3102-d386-487e-bce5-9154bb80a988","type":"string","text":"Caretaker's name","required":false},{"linkId":"dca63b9f-c20d-4a78-9cc0-a26d0f4b4f9b","type":"choice","text":"Relationship with Child","required":false,"answerOption":[{"valueCoding":{"id":"26f199fc-e42c-4c26-91f4-8e0bc822b544","code":"mother","system":"urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d","display":"Mother"}},{"valueCoding":{"id":"e6986ece-3948-45f6-a9e8-df2c53d1dfad","code":"father","system":"urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d","display":"Father"}},{"valueCoding":{"id":"5d7c1291-6ebc-4bc7-8f47-01828c91187f","code":"sister","system":"urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d","display":"Sister"}},{"valueCoding":{"id":"5f7c4716-5d8a-4e7a-c83d-a69db14672a1","code":"brother","system":"urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d","display":"Brother"}},{"valueCoding":{"id":"238883c9-2deb-423b-8221-406fbefcc3fa","code":"grandfather","system":"urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d","display":"Grandfather"}},{"valueCoding":{"id":"30494bf3-5349-4793-8397-b2baf6c567eb","code":"grandmother","system":"urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d","display":"Grandmother"}},{"valueCoding":{"id":"c2a8ae10-4381-4383-8ff9-93512bcd8882","code":"other","system":"urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d","display":"Other"}}]},{"linkId":"01388f41-7668-4093-c924-3ae43fddfc43","type":"choice","text":"Village","required":false,"answerOption":[{"valueCoding":{"id":"72644555-194c-4e2f-9336-90db52569e18","code":"village-a","system":"urn:uuid:0c2434b1-dba8-4f62-d32d-3cb3b1f21713","display":"Village A"}},{"valueCoding":{"id":"f7b6f426-3204-48d8-b5d5-b7707c380b00","code":"village-b","system":"urn:uuid:0c2434b1-dba8-4f62-d32d-3cb3b1f21713","display":"Village B"}}]},{"linkId":"6147ca2c-68b8-4b8f-85e7-814876858c6d","type":"choice","text":"Health Centre","required":false,"answerOption":[{"valueCoding":{"id":"93cd9a52-a63f-44db-9ac1-dbef0a94455f","code":"hc1","system":"urn:uuid:d143f1e3-fe95-4b00-8537-b406777813e0","display":"HC1"}},{"valueCoding":{"id":"b5e074cb-33e0-4a89-99ad-9b1354fcc5b0","code":"hc2","system":"urn:uuid:d143f1e3-fe95-4b00-8537-b406777813e0","display":"HC2"}}]}],"required":false,"enableWhen":[{"question":"38896946-7046-42f0-dabd-6ed855965a38","operator":">=","answerString":"6"}],"enableBehavior":"all"},{"linkId":"c0416d47-c104-4f70-8c92-79bed7ccf851","type":"group","text":"Not Eligible","item":[{"linkId":"e88ff534-127b-470a-848b-a341790864df","type":"display","text":"The child is not eligible for CMAM based on their age.","required":false}],"required":false,"enableWhen":[{"question":"38896946-7046-42f0-dabd-6ed855965a38","operator":"<","answerString":"6"}]}]}
+{
+    "resourceType": "Questionnaire",
+    "language": "nb-NO",
+    "status": "draft",
+    "publisher": "NHN",
+    "meta": {
+        "profile": [
+            "http://ehelse.no/fhir/StructureDefinition/sdf-Questionnaire"
+        ],
+        "tag": [
+            {
+                "system": "urn:ietf:bcp:47",
+                "code": "nb-NO",
+                "display": "Norsk Bokmål"
+            }
+        ]
+    },
+    "useContext": [
+        {
+            "code": {
+                "system": "http://hl7.org/fhir/ValueSet/usage-context-type",
+                "code": "focus",
+                "display": "Clinical Focus"
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "urn:oid:2.16.578.1.12.4.1.1.8655"
+                    }
+                ]
+            }
+        }
+    ],
+    "contact": [
+        {
+            "name": "http://www.nhn.no"
+        }
+    ],
+    "subjectType": [
+        "Patient"
+    ],
+    "item": [
+        {
+            "linkId": "f0361e64-db57-495a-8c82-fa6576e84f74",
+            "type": "string",
+            "text": "First Name",
+            "required": false
+        },
+        {
+            "linkId": "007eadd1-3929-4786-803a-72df7a11735b",
+            "type": "string",
+            "text": "Last Name",
+            "required": false
+        },
+        {
+            "linkId": "be2b7976-84a9-47ce-d370-d85eac562c1c",
+            "type": "string",
+            "text": "Father's Name",
+            "required": false
+        },
+        {
+            "linkId": "216db7ae-08a2-483c-8fdb-a9113c0635fd",
+            "type": "string",
+            "text": "Date of Birth",
+            "required": false
+        },
+        {
+            "linkId": "38896946-7046-42f0-dabd-6ed855965a38",
+            "type": "string",
+            "text": "Age (in months)",
+            "required": false
+        },
+        {
+            "linkId": "23e7f371-6996-417e-af8c-6df395ba04e1",
+            "type": "choice",
+            "text": "Gender",
+            "required": false,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "id": "3a33446f-8f5e-4c9b-8c29-0da0114780e8",
+                        "code": "male",
+                        "system": "urn:uuid:1e5394a9-102a-4521-8020-c2e204d0409c",
+                        "display": "Male"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "436c9e0c-ab4c-4ddf-ad44-7fc53302ffc7",
+                        "code": "female",
+                        "system": "urn:uuid:1e5394a9-102a-4521-8020-c2e204d0409c",
+                        "display": "Female"
+                    }
+                }
+            ],
+            "enableWhen": [
+                {
+                    "question": "38896946-7046-42f0-dabd-6ed855965a38",
+                    "operator": ">=",
+                    "answerString": "6"
+                },
+                {
+                    "question": "38896946-7046-42f0-dabd-6ed855965a38",
+                    "operator": "<=",
+                    "answerString": "59"
+                }
+            ],
+            "enableBehavior": "all"
+        },
+        {
+            "linkId": "cac87acc-6d63-4a57-9dab-34be3dc8ab2a",
+            "type": "group",
+            "text": "Eligible Child",
+            "item": [
+                {
+                    "linkId": "2e4dec25-fa6e-4d5f-bfce-8427f5c7a947",
+                    "type": "string",
+                    "text": "Registration ID",
+                    "required": false
+                },
+                {
+                    "linkId": "aed720ee-2c0b-4fc5-85d6-a6e8026ade11",
+                    "type": "choice",
+                    "text": "Beneficiary Group",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "id": "6f0c1656-869f-4ae9-afed-54f2c3257b6e",
+                                "code": "sid-kids-r-us",
+                                "system": "urn:uuid:15d4dda8-e346-4681-e331-91ccdc76a261",
+                                "display": "Sid Kids R Us"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "adaef75b-c72b-4883-85c5-f3cc774ee1cc",
+                                "system": "urn:uuid:15d4dda8-e346-4681-e331-91ccdc76a261"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "1fda3102-d386-487e-bce5-9154bb80a988",
+                    "type": "string",
+                    "text": "Caretaker's name",
+                    "required": false
+                },
+                {
+                    "linkId": "dca63b9f-c20d-4a78-9cc0-a26d0f4b4f9b",
+                    "type": "choice",
+                    "text": "Relationship with Child",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "id": "26f199fc-e42c-4c26-91f4-8e0bc822b544",
+                                "code": "mother",
+                                "system": "urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d",
+                                "display": "Mother"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "e6986ece-3948-45f6-a9e8-df2c53d1dfad",
+                                "code": "father",
+                                "system": "urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d",
+                                "display": "Father"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "5d7c1291-6ebc-4bc7-8f47-01828c91187f",
+                                "code": "sister",
+                                "system": "urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d",
+                                "display": "Sister"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "5f7c4716-5d8a-4e7a-c83d-a69db14672a1",
+                                "code": "brother",
+                                "system": "urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d",
+                                "display": "Brother"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "238883c9-2deb-423b-8221-406fbefcc3fa",
+                                "code": "grandfather",
+                                "system": "urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d",
+                                "display": "Grandfather"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "30494bf3-5349-4793-8397-b2baf6c567eb",
+                                "code": "grandmother",
+                                "system": "urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d",
+                                "display": "Grandmother"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "c2a8ae10-4381-4383-8ff9-93512bcd8882",
+                                "code": "other",
+                                "system": "urn:uuid:55ef7e98-5fa6-45b4-82b7-a73529ffbc8d",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "01388f41-7668-4093-c924-3ae43fddfc43",
+                    "type": "choice",
+                    "text": "Village",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "id": "72644555-194c-4e2f-9336-90db52569e18",
+                                "code": "village-a",
+                                "system": "urn:uuid:0c2434b1-dba8-4f62-d32d-3cb3b1f21713",
+                                "display": "Village A"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "f7b6f426-3204-48d8-b5d5-b7707c380b00",
+                                "code": "village-b",
+                                "system": "urn:uuid:0c2434b1-dba8-4f62-d32d-3cb3b1f21713",
+                                "display": "Village B"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "6147ca2c-68b8-4b8f-85e7-814876858c6d",
+                    "type": "choice",
+                    "text": "Health Centre",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "id": "93cd9a52-a63f-44db-9ac1-dbef0a94455f",
+                                "code": "hc1",
+                                "system": "urn:uuid:d143f1e3-fe95-4b00-8537-b406777813e0",
+                                "display": "HC1"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "id": "b5e074cb-33e0-4a89-99ad-9b1354fcc5b0",
+                                "code": "hc2",
+                                "system": "urn:uuid:d143f1e3-fe95-4b00-8537-b406777813e0",
+                                "display": "HC2"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "required": false,
+            "enableWhen": [
+                {
+                    "question": "38896946-7046-42f0-dabd-6ed855965a38",
+                    "operator": ">=",
+                    "answerString": "6"
+                }
+            ],
+            "enableBehavior": "all"
+        },
+        {
+            "linkId": "c0416d47-c104-4f70-8c92-79bed7ccf851",
+            "type": "group",
+            "text": "Not Eligible",
+            "item": [
+                {
+                    "linkId": "e88ff534-127b-470a-848b-a341790864df",
+                    "type": "display",
+                    "text": "The child is not eligible for CMAM based on their age.",
+                    "required": false
+                }
+            ],
+            "required": false,
+            "enableWhen": [
+                {
+                    "question": "38896946-7046-42f0-dabd-6ed855965a38",
+                    "operator": "<",
+                    "answerString": "6"
+                }
+            ]
+        }
+    ]
+}
