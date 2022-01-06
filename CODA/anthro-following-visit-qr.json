@@ -1,0 +1,71 @@
+{
+    "resourceType": "QuestionnaireResponse",
+    "status": "in-progress",
+    "item": [
+        {
+            "linkId": "e1516cba-0b90-4054-883f-36ed46015df3",
+            "text": "Does the child have oedema?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "code": "no",
+                        "display": "No",
+                        "system": "urn:uuid:9ad0c9dd-a050-4880-894f-a8a3adcd5fcd"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "8706bbe8-86be-45ed-818a-6c687e5fe5a1",
+            "text": "Please enter child's MUAC in mm",
+            "answer": [
+                {
+                    "valueString": "120"
+                }
+            ]
+        },
+        {
+            "linkId": "c08a75d9-a87b-4c44-fef9-1e3b1882b0b7",
+            "text": "Stabilization Center Referral",
+            "item": [
+                {
+                    "linkId": "11954ad3-e175-4cfd-d860-b9861c473247",
+                    "text": "Child is very ill and should be referred immediately to a stabilization centre for treatment. "
+                },
+                {
+                    "linkId": "06894896-0748-41c8-f8f7-37765b1d64e4",
+                    "text": "Please confirm referral of child",
+                    "answer": [
+                        {
+                            "valueBoolean": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "linkId": "dcfdf8d6-29d3-4b6d-c3c5-ece0212fd613",
+            "text": "Targeted Supplementary Feeding (TSFP)",
+            "item": [
+                {
+                    "linkId": "0f7959fa-17c1-4399-8b88-d53d392965e0",
+                    "text": "Child requires continued targeted supplementary feeding. "
+                }
+            ]
+        },
+        {
+            "linkId": "8d882e41-c834-4761-8e4d-6796861f46f5",
+            "text": "Child is Healthy",
+            "item": [
+                {
+                    "linkId": "cff540ac-0a7a-40a2-d1fd-4f4dee255505",
+                    "text": "If this is second visit with with a GREEN MUAC then child is healthy and can be discharged."
+                },
+                {
+                    "linkId": "a08b4dbe-5c76-4f0a-9298-78acc9fe0ea0",
+                    "text": "What types of counseling have been given?"
+                }
+            ]
+        }
+    ]
+}
